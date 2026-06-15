@@ -1,0 +1,350 @@
+/* ═══════════════════════════════════════════════════════════
+   BELLA VISTA — Premium Luxury Design Layer
+   ═══════════════════════════════════════════════════════════ */
+
+/* Ambient background glow */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(201, 162, 39, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 100% 50%, rgba(201, 162, 39, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 40% at 0% 80%, rgba(201, 162, 39, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Navbar glass luxury ── */
+.navbar::before {
+  background: linear-gradient(
+    180deg,
+    rgba(8, 8, 8, 0.95) 0%,
+    rgba(8, 8, 8, 0.75) 100%
+  ) !important;
+  backdrop-filter: blur(24px) saturate(1.4) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(1.4) !important;
+}
+
+.navbar.scrolled::before {
+  background: rgba(8, 8, 8, 0.97) !important;
+  border-bottom-color: rgba(201, 162, 39, 0.15) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.logo-text {
+  background: linear-gradient(135deg, var(--text-primary) 40%, var(--gold-200));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logo-text span {
+  -webkit-text-fill-color: var(--gold-300);
+}
+
+/* ── Hero cinematic ── */
+.hero {
+  background: #050505;
+}
+
+.hero-overlay {
+  background:
+    linear-gradient(180deg,
+      rgba(5, 5, 5, 0.4) 0%,
+      rgba(5, 5, 5, 0.2) 35%,
+      rgba(5, 5, 5, 0.75) 75%,
+      rgba(5, 5, 5, 0.95) 100%
+    ),
+    radial-gradient(ellipse at center 60%, rgba(201, 162, 39, 0.06) 0%, transparent 70%) !important;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(to top, var(--bg-primary), transparent);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-title {
+  text-shadow: 0 4px 60px rgba(0, 0, 0, 0.6);
+  letter-spacing: -0.01em;
+}
+
+.hero-title em {
+  background: linear-gradient(135deg, var(--gold-100), var(--gold-300), var(--gold-200));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-style: italic;
+}
+
+.hero-badge {
+  background: rgba(201, 162, 39, 0.08) !important;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 30px rgba(201, 162, 39, 0.1), inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+/* ── Section headers ── */
+.section-label {
+  position: relative;
+  padding: 0.375rem 1rem;
+  background: rgba(201, 162, 39, 0.08);
+  border: 1px solid rgba(201, 162, 39, 0.2);
+  border-radius: 100px;
+}
+
+.section-title {
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--gold-300);
+  margin: 1rem auto 0;
+}
+
+.gold-line {
+  display: none;
+}
+
+/* ── About section ── */
+.about {
+  background:
+    linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+  border-top: 1px solid rgba(201, 162, 39, 0.08);
+  border-bottom: 1px solid rgba(201, 162, 39, 0.08);
+}
+
+.about-img-main {
+  position: relative;
+}
+
+.about-img-main::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: var(--radius-lg);
+  padding: 1px;
+  background: linear-gradient(135deg, var(--gold-300), transparent, var(--gold-500));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.stat-number {
+  background: linear-gradient(135deg, var(--gold-200), var(--gold-400));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.chef-card {
+  background: linear-gradient(135deg, rgba(201,162,39,0.05), rgba(255,255,255,0.02)) !important;
+  border-color: rgba(201, 162, 39, 0.15) !important;
+}
+
+/* ── Dish cards luxury ── */
+.dish-card {
+  background: linear-gradient(160deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%) !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+.dish-card:hover {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(201, 162, 39, 0.12) !important;
+}
+
+.dish-price {
+  background: linear-gradient(135deg, rgba(8,8,8,0.9), rgba(20,20,20,0.85)) !important;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.dish-content h3 {
+  color: var(--gold-100);
+}
+
+/* ── Menu section ── */
+.menu {
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(201, 162, 39, 0.05) 0%, transparent 60%),
+    var(--bg-secondary);
+}
+
+.menu-item {
+  background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)) !important;
+  border-radius: var(--radius-md) !important;
+}
+
+.menu-item:hover {
+  background: linear-gradient(135deg, rgba(201,162,39,0.06), rgba(255,255,255,0.02)) !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.filter-tab.active {
+  background: linear-gradient(135deg, var(--gold-300), var(--gold-500)) !important;
+  box-shadow: 0 4px 20px rgba(201, 162, 39, 0.35) !important;
+}
+
+/* ── Gallery ── */
+.gallery-item {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.gallery-item:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(201, 162, 39, 0.1);
+  border-color: rgba(201, 162, 39, 0.2);
+}
+
+/* ── Testimonials ── */
+.testimonials {
+  background:
+    linear-gradient(180deg, var(--bg-secondary), var(--bg-primary));
+}
+
+.testimonial-card {
+  background: linear-gradient(160deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01)) !important;
+  border-color: rgba(201, 162, 39, 0.12) !important;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* ── Forms luxury ── */
+.reservation-form-wrapper,
+.contact-form-wrapper {
+  background: linear-gradient(160deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02)) !important;
+  border-color: rgba(201, 162, 39, 0.15) !important;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  background: rgba(201, 162, 39, 0.04) !important;
+}
+
+/* ── Buttons premium ── */
+.btn-primary {
+  background: linear-gradient(135deg, #d4af37 0%, #a8861e 50%, #c9a227 100%) !important;
+  font-family: var(--font-body);
+  letter-spacing: 0.15em !important;
+  position: relative;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2), transparent);
+  pointer-events: none;
+}
+
+.btn-outline {
+  border-color: rgba(201, 162, 39, 0.5) !important;
+  backdrop-filter: blur(8px);
+}
+
+/* ── Case study ── */
+.case-study-card {
+  background: linear-gradient(160deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01)) !important;
+  border-color: rgba(201, 162, 39, 0.1) !important;
+}
+
+.case-study-card:hover {
+  border-color: rgba(201, 162, 39, 0.3) !important;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3), 0 0 30px rgba(201,162,39,0.08);
+}
+
+/* ── Footer ── */
+.footer {
+  background: linear-gradient(180deg, var(--bg-primary), #030303) !important;
+  border-top: 1px solid rgba(201, 162, 39, 0.12) !important;
+}
+
+.footer-col h4 {
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.footer-col h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 24px;
+  height: 1px;
+  background: var(--gold-300);
+}
+
+/* ── Scroll progress gold ── */
+.scroll-progress {
+  height: 3px !important;
+  box-shadow: 0 0 12px rgba(201, 162, 39, 0.5);
+}
+
+/* ── Section ornament ── */
+.section-ornament {
+  opacity: 0.6;
+}
+
+.section-ornament svg {
+  filter: drop-shadow(0 0 8px rgba(201, 162, 39, 0.4));
+}
+
+/* ── Contact cards ── */
+.contact-info-card {
+  background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)) !important;
+}
+
+.contact-info-card:hover {
+  border-color: rgba(201, 162, 39, 0.3) !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+/* ── Loader premium ── */
+.loader-logo {
+  background: linear-gradient(135deg, var(--text-primary), var(--gold-200));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.loader-logo span {
+  -webkit-text-fill-color: var(--gold-300);
+}
+
+/* Light theme overrides */
+[data-theme='light'] body::before {
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(169, 134, 30, 0.06) 0%, transparent 60%);
+}
+
+[data-theme='light'] .navbar::before {
+  background: linear-gradient(180deg, rgba(250,248,245,0.97), rgba(250,248,245,0.85)) !important;
+}
+
+[data-theme='light'] .hero-overlay {
+  background: linear-gradient(180deg, rgba(250,248,245,0.3), rgba(250,248,245,0.85)) !important;
+}
+
+[data-theme='light'] .dish-content h3 {
+  color: var(--text-primary);
+}
